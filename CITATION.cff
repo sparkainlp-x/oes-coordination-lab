@@ -1,0 +1,70 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "oes-coordination-lab: a synthetic toy benchmark of local disturbances versus system-wide shocks under no, private and shared regime information"
+type: software
+authors:
+  - family-names: "Brisson"
+    given-names: "Jean-François"
+    orcid: "https://orcid.org/0009-0000-9778-5374"
+    affiliation: "Spark AI NLP, Fredericton, New Brunswick, Canada"
+version: 0.1.0
+license: AGPL-3.0-only
+repository-code: "https://github.com/sparkainlp-x/oes-coordination-lab"
+abstract: >-
+  SYNTHETIC toy model with explicit payoffs and hand-coded (not learning)
+  policies. Compares no regime information, independent private noisy signals
+  and one shared noisy signal on the same seeded disturbances, reporting
+  coordination rate, welfare, miscoordination cost and regret with confidence
+  intervals over seeds, exact expectations, and an exact unilateral-deviation
+  audit of each policy profile. No operational claims.
+keywords:
+  - "coordination"
+  - "information structure"
+  - "common knowledge"
+  - "game theory"
+  - "synthetic benchmark"
+  - "python"
+references:
+  - type: software
+    title: "Finite Game Equilibria: exhaustive pure-strategy equilibrium checks for explicit finite games"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+    repository-code: "https://github.com/sparkainlp-x/finite-game-equilibria"
+  - type: article
+    title: "Non-Cooperative Games"
+    authors:
+      - family-names: "Nash"
+        given-names: "John"
+    year: 1951
+    journal: "The Annals of Mathematics"
+    volume: 54
+    issue: "2"
+    start: 286
+    end: 295
+    doi: "10.2307/1969529"
+  - type: article
+    title: "Global Games and Equilibrium Selection"
+    authors:
+      - family-names: "Carlsson"
+        given-names: "Hans"
+      - family-names: "van Damme"
+        given-names: "Eric"
+    year: 1993
+    journal: "Econometrica"
+    volume: 61
+    issue: "5"
+    start: 989
+    end: 1018
+    doi: "10.2307/2951491"
+  - type: article
+    title: "The Electronic Mail Game: Strategic Behavior Under \"Almost Common Knowledge\""
+    authors:
+      - family-names: "Rubinstein"
+        given-names: "Ariel"
+    year: 1989
+    journal: "The American Economic Review"
+    volume: 79
+    issue: "3"
+    start: 385
+    end: 391
