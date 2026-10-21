@@ -1,1 +1,2 @@
 pytest>=8
+finite-game-equilibria @ git+https://github.com/sparkainlp-x/finite-game-equilibria@f92deb37abfe605a8c986e0d409b1b2ac2fdc572
