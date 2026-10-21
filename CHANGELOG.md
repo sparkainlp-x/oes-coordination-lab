@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.1.0 (2026-10-21)
 
 - SYNTHETIC local-vs-shared disturbance model with an explicit payoff table.
 - Three-information-condition experiment (no / private / shared regime information) on common seeded disturbances, with hand-coded baseline policies.

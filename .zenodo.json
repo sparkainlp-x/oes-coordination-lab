@@ -1,6 +1,7 @@
 {
   "title": "oes-coordination-lab: a synthetic toy benchmark of local disturbances versus system-wide shocks under no, private and shared regime information",
   "version": "0.1.0",
+  "publication_date": "2026-10-21",
   "upload_type": "software",
   "description": "<p>SYNTHETIC toy model with explicit payoffs and hand-coded (not learning) policies. Compares no regime information, independent private noisy signals and one shared noisy signal on the same seeded disturbances, reporting coordination rate, welfare, miscoordination cost and regret with confidence intervals over seeds, exact expectations, and an exact unilateral-deviation audit of each policy profile. No operational claims.</p>",
   "creators": [
