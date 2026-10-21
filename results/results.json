@@ -1,0 +1,1101 @@
+{
+  "label": "SYNTHETIC toy model; hand-coded policies, not learning agents",
+  "parameters": {
+    "seeds": 200,
+    "first_seed": 0,
+    "rounds_per_seed": 1000,
+    "n_agents": 3,
+    "p_shared": 0.5,
+    "signal_accuracy": 0.8
+  },
+  "results": [
+    {
+      "condition": "no_info",
+      "policy": "always_system",
+      "strategy": [
+        "system_contingency"
+      ],
+      "simulated": {
+        "coordination_rate": {
+          "mean": 0.498595,
+          "ci95": [
+            0.496433,
+            0.500757
+          ]
+        },
+        "miscoordination_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "welfare": {
+          "mean": 2.495785,
+          "ci95": [
+            2.4893,
+            2.50227
+          ]
+        },
+        "miscoordination_cost": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "regret": {
+          "mean": 1.00281,
+          "ci95": [
+            0.998487,
+            1.007133
+          ]
+        }
+      },
+      "exact": {
+        "coordination_rate": 0.5,
+        "miscoordination_rate": 0.0,
+        "welfare": 2.5,
+        "miscoordination_cost": 0.0,
+        "regret": 1.0
+      },
+      "deviation_check": {
+        "max_deviation_gain": 0.0,
+        "is_equilibrium": true,
+        "best_unilateral_response": [
+          "system_contingency"
+        ],
+        "pure_equilibria_in_strategy_game": 2,
+        "best_equilibrium_profile": [
+          [
+            "system_contingency"
+          ],
+          [
+            "system_contingency"
+          ],
+          [
+            "system_contingency"
+          ]
+        ],
+        "best_equilibrium_welfare": 2.5
+      }
+    },
+    {
+      "condition": "no_info",
+      "policy": "always_local",
+      "strategy": [
+        "local_fix"
+      ],
+      "simulated": {
+        "coordination_rate": {
+          "mean": 0.501405,
+          "ci95": [
+            0.499243,
+            0.503567
+          ]
+        },
+        "miscoordination_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "welfare": {
+          "mean": 2.00281,
+          "ci95": [
+            1.998487,
+            2.007133
+          ]
+        },
+        "miscoordination_cost": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "regret": {
+          "mean": 1.495785,
+          "ci95": [
+            1.4893,
+            1.50227
+          ]
+        }
+      },
+      "exact": {
+        "coordination_rate": 0.5,
+        "miscoordination_rate": 0.0,
+        "welfare": 2.0,
+        "miscoordination_cost": 0.0,
+        "regret": 1.5
+      },
+      "deviation_check": {
+        "max_deviation_gain": 0.0,
+        "is_equilibrium": true,
+        "best_unilateral_response": [
+          "local_fix"
+        ],
+        "pure_equilibria_in_strategy_game": 2,
+        "best_equilibrium_profile": [
+          [
+            "system_contingency"
+          ],
+          [
+            "system_contingency"
+          ],
+          [
+            "system_contingency"
+          ]
+        ],
+        "best_equilibrium_welfare": 2.5
+      }
+    },
+    {
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "strategy": [
+        "local_fix",
+        "system_contingency"
+      ],
+      "simulated": {
+        "coordination_rate": {
+          "mean": 0.511625,
+          "ci95": [
+            0.509507,
+            0.513743
+          ]
+        },
+        "miscoordination_rate": {
+          "mean": 0.480185,
+          "ci95": [
+            0.478026,
+            0.482344
+          ]
+        },
+        "welfare": {
+          "mean": 1.844917,
+          "ci95": [
+            1.836668,
+            1.853166
+          ]
+        },
+        "miscoordination_cost": {
+          "mean": 1.633178,
+          "ci95": [
+            1.624253,
+            1.642104
+          ]
+        },
+        "regret": {
+          "mean": 1.653678,
+          "ci95": [
+            1.644839,
+            1.662518
+          ]
+        }
+      },
+      "exact": {
+        "coordination_rate": 0.512,
+        "miscoordination_rate": 0.48,
+        "welfare": 1.848,
+        "miscoordination_cost": 1.632,
+        "regret": 1.652
+      },
+      "deviation_check": {
+        "max_deviation_gain": 0.152,
+        "is_equilibrium": false,
+        "best_unilateral_response": [
+          "local_fix",
+          "local_fix"
+        ],
+        "pure_equilibria_in_strategy_game": 1,
+        "best_equilibrium_profile": [
+          [
+            "local_fix",
+            "local_fix"
+          ],
+          [
+            "local_fix",
+            "local_fix"
+          ],
+          [
+            "local_fix",
+            "local_fix"
+          ]
+        ],
+        "best_equilibrium_welfare": 2.0
+      }
+    },
+    {
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "strategy": [
+        "local_fix",
+        "system_contingency"
+      ],
+      "simulated": {
+        "coordination_rate": {
+          "mean": 0.798995,
+          "ci95": [
+            0.797272,
+            0.800718
+          ]
+        },
+        "miscoordination_rate": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "welfare": {
+          "mean": 2.996705,
+          "ci95": [
+            2.992005,
+            3.001405
+          ]
+        },
+        "miscoordination_cost": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "regret": {
+          "mean": 0.50189,
+          "ci95": [
+            0.497474,
+            0.506306
+          ]
+        }
+      },
+      "exact": {
+        "coordination_rate": 0.8,
+        "miscoordination_rate": 0.0,
+        "welfare": 3.0,
+        "miscoordination_cost": 0.0,
+        "regret": 0.5
+      },
+      "deviation_check": {
+        "max_deviation_gain": 0.0,
+        "is_equilibrium": true,
+        "best_unilateral_response": [
+          "local_fix",
+          "system_contingency"
+        ],
+        "pure_equilibria_in_strategy_game": 2,
+        "best_equilibrium_profile": [
+          [
+            "local_fix",
+            "system_contingency"
+          ],
+          [
+            "local_fix",
+            "system_contingency"
+          ],
+          [
+            "local_fix",
+            "system_contingency"
+          ]
+        ],
+        "best_equilibrium_welfare": 3.0
+      }
+    }
+  ],
+  "exact_sweep": [
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.6,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.6,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.6,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.36,
+      "miscoordination_rate": 0.48,
+      "welfare": 1.42,
+      "miscoordination_cost": 1.68,
+      "regret": 2.08
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.6,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.6,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.7,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.7,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.7,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.49,
+      "miscoordination_rate": 0.42,
+      "welfare": 1.805,
+      "miscoordination_cost": 1.47,
+      "regret": 1.695
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.7,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.7,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.75,
+      "miscoordination_cost": 0.0,
+      "regret": 0.75
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.8,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.8,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.8,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.64,
+      "miscoordination_rate": 0.32,
+      "welfare": 2.28,
+      "miscoordination_cost": 1.12,
+      "regret": 1.22
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.8,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.8,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.0,
+      "miscoordination_cost": 0.0,
+      "regret": 0.5
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.9,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.9,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.9,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.81,
+      "miscoordination_rate": 0.18,
+      "welfare": 2.845,
+      "miscoordination_cost": 0.63,
+      "regret": 0.655
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.9,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.9,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.25,
+      "miscoordination_cost": 0.0,
+      "regret": 0.25
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.95,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.95,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.95,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.9025,
+      "miscoordination_rate": 0.095,
+      "welfare": 3.16125,
+      "miscoordination_cost": 0.3325,
+      "regret": 0.33875
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 0.95,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.95,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.375,
+      "miscoordination_cost": 0.0,
+      "regret": 0.125
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 1.0,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 1.0,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 1.0,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 1.0,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.5,
+      "miscoordination_cost": 0.0,
+      "regret": 0.0
+    },
+    {
+      "n_agents": 2,
+      "signal_accuracy": 1.0,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 1.0,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.5,
+      "miscoordination_cost": 0.0,
+      "regret": 0.0
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.6,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.6,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.6,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.216,
+      "miscoordination_rate": 0.72,
+      "welfare": 0.844,
+      "miscoordination_cost": 2.496,
+      "regret": 2.656
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.6,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.6,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.7,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.7,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.7,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.343,
+      "miscoordination_rate": 0.63,
+      "welfare": 1.2695,
+      "miscoordination_cost": 2.163,
+      "regret": 2.2305
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.7,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.7,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.75,
+      "miscoordination_cost": 0.0,
+      "regret": 0.75
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.8,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.8,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.8,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.512,
+      "miscoordination_rate": 0.48,
+      "welfare": 1.848,
+      "miscoordination_cost": 1.632,
+      "regret": 1.652
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.8,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.8,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.0,
+      "miscoordination_cost": 0.0,
+      "regret": 0.5
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.9,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.9,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.9,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.729,
+      "miscoordination_rate": 0.27,
+      "welfare": 2.5885,
+      "miscoordination_cost": 0.909,
+      "regret": 0.9115
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.9,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.9,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.25,
+      "miscoordination_cost": 0.0,
+      "regret": 0.25
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.95,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.95,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.95,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.857375,
+      "miscoordination_rate": 0.1425,
+      "welfare": 3.022312,
+      "miscoordination_cost": 0.477375,
+      "regret": 0.477687
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 0.95,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.95,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.375,
+      "miscoordination_cost": 0.0,
+      "regret": 0.125
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 1.0,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 1.0,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 1.0,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 1.0,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.5,
+      "miscoordination_cost": 0.0,
+      "regret": 0.0
+    },
+    {
+      "n_agents": 3,
+      "signal_accuracy": 1.0,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 1.0,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.5,
+      "miscoordination_cost": 0.0,
+      "regret": 0.0
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.6,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.6,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.6,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.07776,
+      "miscoordination_rate": 0.912,
+      "welfare": 0.34864,
+      "miscoordination_cost": 3.12576,
+      "regret": 3.15136
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.6,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.6,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.7,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.7,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.7,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.16807,
+      "miscoordination_rate": 0.8295,
+      "welfare": 0.707855,
+      "miscoordination_cost": 2.78607,
+      "regret": 2.792145
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.7,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.7,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.75,
+      "miscoordination_cost": 0.0,
+      "regret": 0.75
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.8,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.8,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.8,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.32768,
+      "miscoordination_rate": 0.672,
+      "welfare": 1.28352,
+      "miscoordination_cost": 2.21568,
+      "regret": 2.21648
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.8,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.8,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.0,
+      "miscoordination_cost": 0.0,
+      "regret": 0.5
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.9,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.9,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.9,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.59049,
+      "miscoordination_rate": 0.4095,
+      "welfare": 2.171485,
+      "miscoordination_cost": 1.32849,
+      "regret": 1.328515
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.9,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.9,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.25,
+      "miscoordination_cost": 0.0,
+      "regret": 0.25
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.95,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.95,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.95,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.773781,
+      "miscoordination_rate": 0.226219,
+      "welfare": 2.771343,
+      "miscoordination_cost": 0.728656,
+      "regret": 0.728657
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 0.95,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 0.95,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.375,
+      "miscoordination_cost": 0.0,
+      "regret": 0.125
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 1.0,
+      "condition": "no_info",
+      "policy": "always_system",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.5,
+      "miscoordination_cost": 0.0,
+      "regret": 1.0
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 1.0,
+      "condition": "no_info",
+      "policy": "always_local",
+      "coordination_rate": 0.5,
+      "miscoordination_rate": 0.0,
+      "welfare": 2.0,
+      "miscoordination_cost": 0.0,
+      "regret": 1.5
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 1.0,
+      "condition": "private_info",
+      "policy": "follow_signal",
+      "coordination_rate": 1.0,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.5,
+      "miscoordination_cost": 0.0,
+      "regret": 0.0
+    },
+    {
+      "n_agents": 5,
+      "signal_accuracy": 1.0,
+      "condition": "shared_info",
+      "policy": "follow_signal",
+      "coordination_rate": 1.0,
+      "miscoordination_rate": 0.0,
+      "welfare": 3.5,
+      "miscoordination_cost": 0.0,
+      "regret": 0.0
+    }
+  ]
+}
