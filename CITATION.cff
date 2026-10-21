@@ -8,6 +8,14 @@ authors:
     orcid: "https://orcid.org/0009-0000-9778-5374"
     affiliation: "Spark AI NLP, Fredericton, New Brunswick, Canada"
 version: 0.1.0
+doi: "10.5281/zenodo.23530289"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23530289"
+    description: "Version DOI for v0.1.0"
+  - type: doi
+    value: "10.5281/zenodo.23530288"
+    description: "Concept DOI (all versions)"
 date-released: "2026-10-21"
 license: AGPL-3.0-only
 repository-code: "https://github.com/sparkainlp-x/oes-coordination-lab"

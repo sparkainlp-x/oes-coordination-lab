@@ -1,5 +1,7 @@
 # oes-coordination-lab
 
+Software DOI for v0.1.0: [10.5281/zenodo.23530289](https://doi.org/10.5281/zenodo.23530289) (all versions: [10.5281/zenodo.23530288](https://doi.org/10.5281/zenodo.23530288)).
+
 **SYNTHETIC toy benchmark.** A small, fully explicit model of local disturbances versus system-wide shocks. It asks one question: *if agents are told more clearly whether a disruption is local or shared, do they coordinate better?* The agents are **hand-coded policies, not learning agents**. The payoffs are invented for illustration. Nothing here describes a real system.
 
 ## Question
