@@ -1,0 +1,55 @@
+{
+  "title": "oes-coordination-lab: a synthetic toy benchmark of local disturbances versus system-wide shocks under no, private and shared regime information",
+  "version": "0.1.0",
+  "upload_type": "software",
+  "description": "<p>SYNTHETIC toy model with explicit payoffs and hand-coded (not learning) policies. Compares no regime information, independent private noisy signals and one shared noisy signal on the same seeded disturbances, reporting coordination rate, welfare, miscoordination cost and regret with confidence intervals over seeds, exact expectations, and an exact unilateral-deviation audit of each policy profile. No operational claims.</p>",
+  "creators": [
+    {
+      "name": "Brisson, Jean-François",
+      "orcid": "0009-0000-9778-5374",
+      "affiliation": "Spark AI NLP, Fredericton, New Brunswick, Canada"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "coordination",
+    "information structure",
+    "common knowledge",
+    "game theory",
+    "synthetic benchmark",
+    "Python"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sparkainlp-x/finite-game-equilibria",
+      "relation": "requires",
+      "scheme": "url",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.2307/1969529",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.2307/2951491",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    }
+  ],
+  "references": [
+    "Nash, J. (1951). Non-Cooperative Games. The Annals of Mathematics, 54(2), 286-295. https://doi.org/10.2307/1969529",
+    "Carlsson, H., & van Damme, E. (1993). Global Games and Equilibrium Selection. Econometrica, 61(5), 989-1018. https://doi.org/10.2307/2951491",
+    "Rubinstein, A. (1989). The Electronic Mail Game: Strategic Behavior Under \"Almost Common Knowledge\". The American Economic Review, 79(3), 385-391.",
+    "Brisson, J.-F. finite-game-equilibria. https://github.com/sparkainlp-x/finite-game-equilibria"
+  ],
+  "communities": [
+    {
+      "identifier": "spark-ai-nlp"
+    }
+  ]
+}
