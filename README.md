@@ -15,7 +15,7 @@ The experiment compares three information conditions:
 
 1. **no regime information**: agents only know the prior;
 2. **private information**: each agent gets its *own independent* noisy signal of the regime;
-3. **shared information**: all agents see *one common* noisy signal, with the same accuracy.
+3. **shared information**: all agents see *one shared* noisy signal, with the same accuracy.
 
 Then it asks whether better observability improves coordination, or whether agents still fail even when the structure is explicit.
 
@@ -54,7 +54,7 @@ Payoffs per agent (`oes_coordination/model.py`, `PAYOFFS`):
 
 Exact expectations: welfare 2.5 / 2.0 / 1.848 / 3.0, and coordination rate 0.5 / 0.5 / 0.512 / 0.8, in table order. The efficient ceiling (perfect information) is 3.5.
 
-**Takeaway (honest, toy-model only):** information helped coordination only when it was *shared*. A common signal raised welfare from 2.50 to 3.00. Private signals of the same accuracy made things *worse* than having no information at all: welfare fell to 1.85, because agents acting on their own signals split their choices in 48% of rounds. Following those private signals is not even an equilibrium: an agent gains 0.152 by ignoring its signal and always playing `local_fix`. The only pure equilibrium of that strategy game is the safe all-`local_fix` trap, at welfare 2.0.
+**Takeaway (honest, toy-model only):** information helped coordination only when it was *shared*. A shared signal raised welfare from 2.50 to 3.00. Private signals of the same accuracy made things *worse* than having no information at all: welfare fell to 1.85, because agents acting on their own signals split their choices in 48% of rounds. Following those private signals is not even an equilibrium: an agent gains 0.152 by ignoring its signal and always playing `local_fix`. The only pure equilibrium of that strategy game is the safe all-`local_fix` trap, at welfare 2.0.
 
 Exact sweep (`exact_sweep` in `results/results.json`, P(shared) = 0.5). Welfare of `follow_signal`:
 
@@ -72,7 +72,7 @@ Private information gets worse as the group grows, because all *n* independent s
 ## Limitations
 
 - Toy model with one hand-chosen payoff table and hand-coded policies. There is no learning, no communication protocol, no reporting incentives and no real data. Different payoffs can change the ranking.
-- Signals are symmetric and binary. Private noise is independent across agents, and the shared signal is a single common draw.
+- Signals are symmetric and binary. Private noise is independent across agents, and the shared signal is a single draw seen by every agent.
 - The deviation check covers pure observation-to-action strategies in this finite toy game. It says nothing about mixed strategies, learning dynamics, or any real multi-agent or AI system.
 - The CIs use a normal approximation across seeds. The exact values are the reference.
 
