@@ -7,6 +7,7 @@ import unittest
 from oes_coordination.__main__ import main
 from oes_coordination.evaluation import (
     Experiment, episodes, mean_utilities, restricted_gap, run_experiment, select_profile,
+    standard_error,
 )
 from oes_coordination.model import (
     Costs, Episode, GroundTruth, Observation, Simulation, policy_inputs, utilities,
@@ -127,6 +128,17 @@ class EvaluationTests(unittest.TestCase):
         result = run_experiment(Experiment(Simulation(1, 1, 1, 1), Costs(1e308, 1e308, 0),
                                            seeds=(1, 2), calibration_episodes=2,
                                            evaluation_episodes=3))
+        json.dumps(result, allow_nan=False)
+
+    def test_standard_error_avoids_intermediate_overflow(self):
+        self.assertEqual(standard_error((-1.7e308, 1.7e308)), 1.7e308)
+        self.assertEqual(standard_error((0.0, 0.0)), 0)
+        self.assertEqual(standard_error((1.0, 3.0)), 1)
+        self.assertIsNone(standard_error((1.0,)))
+        result = run_experiment(Experiment(
+            Simulation(0.4, 0.5, 0.5, 0.5), Costs(1.7e308, 1.7e308, 0),
+            (43, 44), 1, 1,
+        ))
         json.dumps(result, allow_nan=False)
 
     def test_cli_json_and_validation(self):

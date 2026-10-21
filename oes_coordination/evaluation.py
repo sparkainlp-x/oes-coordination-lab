@@ -102,6 +102,17 @@ def select_profile(data: tuple[Episode, ...], sharing: bool, costs: Costs) -> tu
     return tuple(max(policies, key=lambda policy: scores[policy][i]) for i in range(AGENTS))
 
 
+def standard_error(values: tuple[float, ...]) -> float | None:
+    if len(values) < 2:
+        return None
+    scale = max(abs(value) for value in values)
+    if scale == 0:
+        return 0.0
+    # Normalize first: the standard deviation can overflow even when its SE cannot.
+    normalized = tuple(value / scale for value in values)
+    return (statistics.stdev(normalized) / math.sqrt(len(values))) * scale
+
+
 def run_experiment(config: Experiment) -> dict:
     calibration = tuple(chain.from_iterable(
         episodes(config, seed, "calibration", scenario)
@@ -154,8 +165,7 @@ def run_experiment(config: Experiment) -> dict:
                 statistics.mean(row[i] for row in differences) for i in range(AGENTS)
             ],
             "agent_standard_error_over_seed_means": [
-                statistics.stdev(row[i] for row in differences) / math.sqrt(len(differences))
-                if len(differences) > 1 else None for i in range(AGENTS)
+                standard_error(tuple(row[i] for row in differences)) for i in range(AGENTS)
             ],
             "caveat": "Descriptive seed variability conditional on the pooled calibrated profiles; not a significance test.",
         },
