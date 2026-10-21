@@ -100,3 +100,7 @@ The three-condition comparison (no regime information, local/private information
 ## Citation and licence
 
 See `CITATION.cff`. Author: Jean-François Brisson (ORCID [0009-0000-9778-5374](https://orcid.org/0009-0000-9778-5374)). Licensed under AGPL-3.0-only (`LICENSE`).
+
+Copyright (c) 2026 Jean-François Brisson, Spark AI NLP.
+
+This software is available under the GNU Affero General Public License v3.0 only (AGPL-3.0-only); see [LICENSE](LICENSE).
